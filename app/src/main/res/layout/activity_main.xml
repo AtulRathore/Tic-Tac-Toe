@@ -12,6 +12,36 @@
     tools:context="com.example.atul.tic_tac_toe.MainActivity">
 
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:padding="30dp"
+        android:layout_centerVertical="true"
+        android:alpha="1"
+        android:id="@+id/playAgainLayout"
+        android:elevation="2dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/winnerMessage"
+            android:textSize="24sp"
+            android:onClick="playAgain" />
+
+        <Button
+            android:text="Play Again"
+            android:layout_width="235dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/playAgainButton"
+            android:onClick="playAgain" />
+    </LinearLayout>
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="360dp"
@@ -19,10 +49,10 @@
         android:columnCount="3"
         android:rowCount="3"
         android:background="@drawable/board"
-        android:layout_marginTop="38dp"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/gridLayout">
 
         <ImageView
             android:layout_width="90dp"
@@ -36,6 +66,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="32dp"
             tools:ignore="ObsoleteLayoutParam"
+            android:tag="0"
             android:onClick="dropIn" />
 
         <ImageView
@@ -50,6 +81,7 @@
             tools:ignore="ObsoleteLayoutParam"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:tag="1"
             android:onClick="dropIn" />
 
         <ImageView
@@ -64,6 +96,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
             tools:ignore="ObsoleteLayoutParam"
+            android:tag="2"
             android:onClick="dropIn" />
 
         <ImageView
@@ -77,6 +110,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="32dp"
+            android:tag="3"
             android:onClick="dropIn" />
 
         <ImageView
@@ -91,6 +125,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="32dp"
             tools:ignore="ObsoleteLayoutParam"
+            android:tag="4"
             android:onClick="dropIn" />
 
         <ImageView
@@ -104,6 +139,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="32dp"
+            android:tag="5"
             android:onClick="dropIn"/>
 
         <ImageView
@@ -117,6 +153,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="32dp"
+            android:tag="6"
             android:onClick="dropIn" />
 
         <ImageView
@@ -130,6 +167,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:tag="7"
             android:onClick="dropIn"/>
 
         <ImageView
@@ -143,7 +181,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="32dp"
+            android:tag="8"
             android:onClick="dropIn"/>
 
     </GridLayout>
+
+
 </RelativeLayout>
